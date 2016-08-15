@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootswatch/paper/variables";
+ @import "bootstrap";
+ // body { padding-top: 10px;
+ //        padding-left: 20px;
+ //      }
+ @import "bootswatch/paper/bootswatch";
