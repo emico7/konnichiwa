@@ -5,11 +5,10 @@ Rails.application.routes.draw do
 
   # authenticated :user do
   #   root 'secret#index', as: :authenticated_root
+  # this should be questions#index
   # end
 
-  get 'welcome/index'
-
-  get 'welcome/about'
+  get 'about' => 'welcome#about'
 
   root 'welcome#index'
 
