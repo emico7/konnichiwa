@@ -1,12 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dodson/bloc/code/konnichiwa/spec/models/question_spec.rb": [
+      "/Users/dodson/bloc/code/konnichiwa/spec/models/answer_spec.rb": [
         1,
         null,
+        1,
         1,
         2,
         null,
+        2,
         null,
         1,
         1,
@@ -555,6 +557,14 @@
         null,
         null
       ],
+      "/Users/dodson/bloc/code/konnichiwa/spec/factories/answers.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/dodson/bloc/code/konnichiwa/spec/factories/questions.rb": [
         1,
         1,
@@ -582,9 +592,8 @@
         null,
         1,
         null,
-        null,
-        null,
-        null,
+        1,
+        1,
         null,
         null,
         1,
@@ -625,11 +634,16 @@
         1,
         null
       ],
+      "/Users/dodson/bloc/code/konnichiwa/app/models/answer.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/dodson/bloc/code/konnichiwa/app/models/question.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1471378792
+    "timestamp": 1471386380
   }
 }
