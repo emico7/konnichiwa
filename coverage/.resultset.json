@@ -1,18 +1,50 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dodson/bloc/code/konnichiwa/spec/models/answer_spec.rb": [
+      "/Users/dodson/bloc/code/konnichiwa/spec/controllers/questions_controller_spec.rb": [
         1,
         null,
         1,
+        3,
+        2,
+        null,
+        1,
+        null,
         1,
         2,
         null,
-        2,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -26,6 +58,9 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null,
         null,
         null,
@@ -76,6 +111,8 @@
         1,
         null,
         null,
+        1,
+        1,
         null
       ],
       "/Users/dodson/bloc/code/konnichiwa/config/environment.rb": [
@@ -557,6 +594,22 @@
         null,
         null
       ],
+      "/Users/dodson/bloc/code/konnichiwa/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/dodson/bloc/code/konnichiwa/app/helpers/questions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/dodson/bloc/code/konnichiwa/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/dodson/bloc/code/konnichiwa/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
       "/Users/dodson/bloc/code/konnichiwa/spec/factories/answers.rb": [
         1,
         1,
@@ -593,6 +646,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         null,
         null,
@@ -622,28 +677,55 @@
         1,
         null
       ],
-      "/Users/dodson/bloc/code/konnichiwa/app/helpers/application_helper.rb": [
+      "/Users/dodson/bloc/code/konnichiwa/spec/support/controller_helpers.rb": [
         1,
+        1,
+        2,
+        0,
+        0,
+        null,
+        2,
+        2,
+        null,
+        null,
         null
       ],
-      "/Users/dodson/bloc/code/konnichiwa/app/helpers/users_helper.rb": [
+      "/Users/dodson/bloc/code/konnichiwa/app/controllers/questions_controller.rb": [
         1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
-      "/Users/dodson/bloc/code/konnichiwa/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/dodson/bloc/code/konnichiwa/app/models/answer.rb": [
+      "/Users/dodson/bloc/code/konnichiwa/app/controllers/application_controller.rb": [
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/dodson/bloc/code/konnichiwa/app/models/question.rb": [
         1,
+        1,
         null
       ]
     },
-    "timestamp": 1471386380
+    "timestamp": 1471394141
   }
 }
