@@ -8,7 +8,7 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "GET show" do
       it "returns http success" do
-        get :show, { params: {id: question.id} }
+        get :show, { params: { id: question.id } }
         expect(response).to have_http_status(:success)
       end
     end
@@ -22,18 +22,17 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   context "member user" do
-    before do
-      sign_in user
-    end
+    # before do
+    #   sign_in user
+    # end
 
     describe "GET index" do
 
-      # before do
-      #   sign_in user
-      # end
+      before do
+        sign_in user
+      end
 
       it "returns http success" do
-
         get :index
         expect(response).to have_http_status(:success)
       end
@@ -55,9 +54,9 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "GET new" do
 
-      # before do
-      #   sign_in user
-      # end
+      before do
+        sign_in user
+      end
 
       it "returns http success" do
         get :new
@@ -78,20 +77,20 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "POST create" do
 
-      # it "increases the number of Question by 1" do
-      #   expect{post :create, params: { question: { title: question.title, body: question.body } } }.to change(Question,:count).by(1)
-      # end
+      it "increases the number of Question by 1" do
+        expect{post :create, params: { question: { title: question.title, body: question.body } } }.to change(Question,:count).by(1)
+      end
 
 
       it "assigns the new question to @question" do
-        # sign_in user
+        sign_in user
         post :create, params: { question: { title: question.title, body: question.body } }
         expect(assigns(:question)).to eq Question.last
       end
 
 
       it "redirects to the question post" do
-        # sign_in user
+        sign_in user
         post :create, params: { question: { title: question.title, body: question.body } }
         expect(response).to redirect_to Question.last
       end
@@ -99,22 +98,22 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "GET edit" do
 
-      # before do
-      #   sign_in user
-      # end
+      before do
+        sign_in user
+      end
 
       it "returns http success" do
-        get :edit, { params: {id: question.id} }
+        get :edit, { params: { id: question.id} }
         expect(response).to have_http_status(:success)
       end
 
       it "renders the #edit view" do
-        get :edit,  { params: {id: question.id} }
+        get :edit,  { params: { id: question.id} }
         expect(response).to render_template :edit
       end
 
       it "assigns question to be updated to @question" do
-        get :edit,  { params: {id: question.id} }
+        get :edit,  { params: { id: question.id} }
 
         question_instance = assigns(:question)
 
@@ -126,15 +125,9 @@ RSpec.describe QuestionsController, type: :controller do
 
     # describe "PUT update" do
     #
-    #   # before do
-    #   #   sign_in user
-    #   # end
-    #
-    #   let(:updated_question) { create(:question) }
-    #
     #   it "updates question with expected attributes" do
-    #     new_title = updated_question.title
-    #     new_body = updated_question.body
+    #
+    #
     #
     #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
     #
@@ -145,8 +138,11 @@ RSpec.describe QuestionsController, type: :controller do
     #   end
     #
     #   it "redirects to the updated question" do
-    #     new_title = updated_question.title
-    #     new_body = updated_question.body
+    #
+    #     sign_in user
+    #
+    #     new_title = "Updated title"
+    #     new_body = "This is an updated body."
     #
     #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
     #     expect(response).to redirect_to question
@@ -154,15 +150,18 @@ RSpec.describe QuestionsController, type: :controller do
     # end
 
     describe "DELETE destroy" do
+      before do
+        sign_in user
+      end
 
       it "deletes the question" do
-        delete :destroy, {id: question.id}
+        delete :destroy, params: { id: question.id }
         count = Question.where({id: question.id}).size
         expect(count).to eq 0
       end
 
       it "redirects to questions index" do
-        delete :destroy, {id: question.id}
+        delete :destroy, params: { id: question.id }
         expect(response).to redirect_to questions_path
       end
     end

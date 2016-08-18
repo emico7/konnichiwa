@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-18T15:08:25-06:00">2016-08-18T15:08:25-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-18T15:36:59-06:00">2016-08-18T15:36:59-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">75.36%</span></span>
+    (<span class="covered_percent"><span class="green">91.03%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.8
+       <span class="green">
+         1.26
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>32</b> files in total.
-    <b>211</b> relevant lines. 
-    <span class="green"><b>159</b> lines covered</span> and
-    <span class="red"><b>52</b> lines missed </span>
+    <b>234</b> relevant lines. 
+    <span class="green"><b>213</b> lines covered</span> and
+    <span class="red"><b>21</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#78db6b0d4222fc435d8767dd650e49b46af9d6a9" class="src_link" title="app/controllers/questions_controller.rb">app/controllers/questions_controller.rb</a></td>
-        <td class="red strong">42.86 %</td>
+        <td class="red strong">68.57 %</td>
         <td>62</td>
         <td>35</td>
-        <td>15</td>
-        <td>20</td>
-        <td>0.5</td>
+        <td>24</td>
+        <td>11</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -312,12 +312,12 @@
       
       <tr>
         <td class="strong"><a href="#7dd0be6452ffb8c00d6d63b83da685c6bc8107e5" class="src_link" title="spec/controllers/questions_controller_spec.rb">spec/controllers/questions_controller_spec.rb</a></td>
-        <td class="red strong">55.74 %</td>
-        <td>170</td>
-        <td>61</td>
-        <td>34</td>
-        <td>27</td>
-        <td>0.6</td>
+        <td class="green strong">94.05 %</td>
+        <td>169</td>
+        <td>84</td>
+        <td>79</td>
+        <td>5</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -367,7 +367,7 @@
         <td>7</td>
         <td>5</td>
         <td>2</td>
-        <td>1.1</td>
+        <td>5.9</td>
       </tr>
       
     </tbody>
@@ -479,11 +479,11 @@
         <div class="source_table" id="78db6b0d4222fc435d8767dd650e49b46af9d6a9">
   <div class="header">
     <h3>app/controllers/questions_controller.rb</h3>
-    <h4><span class="red">42.86 %</span> covered</h4>
+    <h4><span class="red">68.57 %</span> covered</h4>
     <div>
       <b>35</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>20</b> lines missed.</span>
+      <span class="green"><b>24</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -514,8 +514,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
           <code class="ruby">    @questions = Question.all</code>
         </li>
@@ -538,8 +538,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">    @question = Question.find(params[:id])</code>
         </li>
@@ -562,8 +562,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="3" data-linenumber="13">
+          <span class="hits">3</span>
           
           <code class="ruby">    @question = Question.new</code>
         </li>
@@ -586,8 +586,8 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
           
           <code class="ruby">    @question = Question.new(question_params)</code>
         </li>
@@ -598,20 +598,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    if @question.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">      flash[:notice] = &quot;Question was saved successfully.&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to @question</code>
         </li>
@@ -658,8 +658,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="3" data-linenumber="29">
+          <span class="hits">3</span>
           
           <code class="ruby">    @question = Question.find(params[:id])</code>
         </li>
@@ -844,8 +844,8 @@
           <code class="ruby">  def question_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
-          
+        <li class="covered" data-hits="2" data-linenumber="60">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:question).permit(:title, :body)</code>
         </li>
@@ -4241,11 +4241,11 @@
         <div class="source_table" id="7dd0be6452ffb8c00d6d63b83da685c6bc8107e5">
   <div class="header">
     <h3>spec/controllers/questions_controller_spec.rb</h3>
-    <h4><span class="red">55.74 %</span> covered</h4>
+    <h4><span class="green">94.05 %</span> covered</h4>
     <div>
-      <b>61</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
-      <span class="red"><b>27</b> lines missed.</span>
+      <b>84</b> relevant lines. 
+      <span class="green"><b>79</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -4270,14 +4270,14 @@
           <code class="ruby">RSpec.describe QuestionsController, type: :controller do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="14" data-linenumber="4">
+          <span class="hits">14</span>
           
           <code class="ruby">  let(:user) { create(:user) }</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="13" data-linenumber="5">
+          <span class="hits">13</span>
           
           <code class="ruby">  let(:question) { create(:question) }</code>
         </li>
@@ -4312,14 +4312,14 @@
           <code class="ruby">      it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        get :show, { params: {id: question.id} }</code>
+          <code class="ruby">        get :show, { params: { id: question.id } }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to have_http_status(:success)</code>
         </li>
@@ -4354,14 +4354,14 @@
           <code class="ruby">      it &quot;returns http redirect&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to redirect_to(new_user_session_path)</code>
         </li>
@@ -4396,22 +4396,22 @@
           <code class="ruby">  context &quot;member user&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="25">
           
-          <code class="ruby">    before do</code>
+          
+          <code class="ruby">    # before do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">      sign_in user</code>
+          
+          <code class="ruby">    #   sign_in user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
@@ -4432,22 +4432,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # before do</code>
+          <code class="ruby">      before do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="2" data-linenumber="32">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">      #   sign_in user</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
@@ -4462,112 +4462,112 @@
           <code class="ruby">      it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to have_http_status(:success)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;assigns [question] to @questions&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(assigns(:questions)).to eq([question])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">    # describe &quot;GET show&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">    #   it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">    #     # sign_in user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">    #     get :show</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">    #     expect(response).to have_http_status(:success)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">    #   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
@@ -4576,100 +4576,100 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">    describe &quot;GET new&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
           
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="58">
+          <span class="hits">3</span>
           
-          <code class="ruby">      # before do</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">      #   sign_in user</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">      # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="63">
-          
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="64">
-          
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to have_http_status(:success)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;renders the new view&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
-          
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="69">
-          
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to render_template :new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
@@ -4678,76 +4678,76 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;instantiates @question&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="74">
-          
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
           
           <code class="ruby">        get :new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
-          
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(assigns(:question)).not_to be_nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
           <code class="ruby">    describe &quot;POST create&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
           
+          <code class="ruby">      it &quot;increases the number of Question by 1&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="81">
+          <span class="hits">2</span>
           
-          <code class="ruby">      # it &quot;increases the number of Question by 1&quot; do</code>
+          <code class="ruby">        expect{post :create, params: { question: { title: question.title, body: question.body } } }.to change(Question,:count).by(1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
           
           
-          <code class="ruby">      #   expect{post :create, params: { question: { title: question.title, body: question.body } } }.to change(Question,:count).by(1)</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
-          <code class="ruby">      # end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
@@ -4756,40 +4756,40 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;assigns the new question to @question&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        # sign_in user</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="88">
-          
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
           <code class="ruby">        post :create, params: { question: { title: question.title, body: question.body } }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(assigns(:question)).to eq Question.last</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="90">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
@@ -4798,475 +4798,469 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="93">
+        <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;redirects to the question post&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        # sign_in user</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="95">
-          
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
           
           <code class="ruby">        post :create, params: { question: { title: question.title, body: question.body } }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="96">
-          
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to redirect_to Question.last</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="97">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="98">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="100">
+        <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
           <code class="ruby">    describe &quot;GET edit&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
           
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="102">
+          <span class="hits">3</span>
           
-          <code class="ruby">      # before do</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">      #   sign_in user</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">      # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="106">
+        <li class="covered" data-hits="1" data-linenumber="105">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="107">
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        get :edit, { params: {id: question.id} }</code>
+          <code class="ruby">        get :edit, { params: { id: question.id} }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="108">
-          
+        <li class="covered" data-hits="1" data-linenumber="107">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to have_http_status(:success)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="109">
           
           
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="110">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="111">
+        <li class="covered" data-hits="1" data-linenumber="110">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;renders the #edit view&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="112">
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        get :edit,  { params: {id: question.id} }</code>
+          <code class="ruby">        get :edit,  { params: { id: question.id} }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="113">
-          
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to render_template :edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
           
           
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="115">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="115">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;assigns question to be updated to @question&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        get :edit,  { params: {id: question.id} }</code>
+          <code class="ruby">        get :edit,  { params: { id: question.id} }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="118">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="119">
-          
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
           
           <code class="ruby">        question_instance = assigns(:question)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="119">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="121">
-          
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(question_instance.id).to eq question.id</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="122">
-          
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(question_instance.title).to eq question.title</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="123">
-          
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(question_instance.body).to eq question.body</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    describe &quot;PUT update&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">    # describe &quot;PUT update&quot; do</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="128">
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #</code>
+          <code class="ruby">      it &quot;updates question with expected attributes&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">    #   # before do</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="130">
           
           
-          <code class="ruby">    #   #   sign_in user</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby">    #   # end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="132">
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #</code>
+          <code class="ruby">        put :update, id: question.id, params: { question: {title: new_title, body: new_body} }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="133">
           
           
-          <code class="ruby">    #   let(:updated_question) { create(:question) }</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="134">
+        <li class="missed" data-hits="0" data-linenumber="134">
           
           
-          <code class="ruby">    #</code>
+          <code class="ruby">        updated_question = assigns(:question)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="135">
+        <li class="missed" data-hits="0" data-linenumber="135">
           
           
-          <code class="ruby">    #   it &quot;updates question with expected attributes&quot; do</code>
+          <code class="ruby">        expect(updated_question.id).to eq question.id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="missed" data-hits="0" data-linenumber="136">
           
           
-          <code class="ruby">    #     new_title = updated_question.title</code>
+          <code class="ruby">        expect(updated_question.title).to eq new_title</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="missed" data-hits="0" data-linenumber="137">
           
           
-          <code class="ruby">    #     new_body = updated_question.body</code>
+          <code class="ruby">        expect(updated_question.body).to eq new_body</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby">    #</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="139">
           
           
-          <code class="ruby">    #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="140">
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #</code>
+          <code class="ruby">      it &quot;redirects to the updated question&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">    #     updated_question = assigns(:question)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="142">
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #     expect(updated_question.id).to eq question.id</code>
+          <code class="ruby">        sign_in user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="143">
           
           
-          <code class="ruby">    #     expect(updated_question.title).to eq new_title</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="144">
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #     expect(updated_question.body).to eq new_body</code>
+          <code class="ruby">        new_title = &quot;Updated title&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="145">
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   end</code>
+          <code class="ruby">        new_body = &quot;This is an updated body.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
           
           
-          <code class="ruby">    #</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="147">
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   it &quot;redirects to the updated question&quot; do</code>
+          <code class="ruby">        put :update, id: question.id, params: { question: {title: new_title, body: new_body} }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="148">
+        <li class="missed" data-hits="0" data-linenumber="148">
           
           
-          <code class="ruby">    #     new_title = updated_question.title</code>
+          <code class="ruby">        expect(response).to redirect_to question</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="149">
           
           
-          <code class="ruby">    #     new_body = updated_question.body</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="150">
           
           
-          <code class="ruby">    #</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">    #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="152">
-          
-          
-          <code class="ruby">    #     expect(response).to redirect_to question</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="153">
-          
-          
-          <code class="ruby">    #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="154">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="155">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="156">
+        <li class="covered" data-hits="1" data-linenumber="152">
           <span class="hits">1</span>
           
           <code class="ruby">    describe &quot;DELETE destroy&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="157">
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="154">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        sign_in user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="158">
+        <li class="covered" data-hits="1" data-linenumber="157">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;deletes the question&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="159">
+        <li class="covered" data-hits="1" data-linenumber="158">
           <span class="hits">1</span>
           
-          <code class="ruby">        delete :destroy, {id: question.id}</code>
+          <code class="ruby">        delete :destroy, params: { id: question.id }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="160">
+        <li class="covered" data-hits="1" data-linenumber="159">
           <span class="hits">1</span>
           
           <code class="ruby">        count = Question.where({id: question.id}).size</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="161">
+        <li class="covered" data-hits="1" data-linenumber="160">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(count).to eq 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="161">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="163">
+        <li class="never" data-hits="" data-linenumber="162">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="164">
+        <li class="covered" data-hits="1" data-linenumber="163">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;redirects to questions index&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="165">
+        <li class="covered" data-hits="1" data-linenumber="164">
           <span class="hits">1</span>
           
-          <code class="ruby">        delete :destroy, {id: question.id}</code>
+          <code class="ruby">        delete :destroy, params: { id: question.id }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="166">
+        <li class="covered" data-hits="1" data-linenumber="165">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(response).to redirect_to questions_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="167">
+        <li class="never" data-hits="" data-linenumber="166">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="168">
+        <li class="never" data-hits="" data-linenumber="167">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="169">
+        <li class="never" data-hits="" data-linenumber="168">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="170">
+        <li class="never" data-hits="" data-linenumber="169">
           
           
           <code class="ruby">end</code>
@@ -5890,8 +5884,8 @@
           <code class="ruby">  def sign_in(user)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="13" data-linenumber="3">
+          <span class="hits">13</span>
           
           <code class="ruby">    if user.nil?</code>
         </li>
@@ -5914,14 +5908,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="13" data-linenumber="7">
+          <span class="hits">13</span>
           
           <code class="ruby">      allow(request.env[&#39;warden&#39;]).to receive(:authenticate!).and_return(user)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="13" data-linenumber="8">
+          <span class="hits">13</span>
           
           <code class="ruby">      allow(controller).to receive(:current_user).and_return(user)</code>
         </li>
