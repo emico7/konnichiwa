@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
+  resources :questions
+
   get 'users/show'
 
   devise_for :users
 
-  # authenticated :user do
-  #   root 'secret#index', as: :authenticated_root
-  # end
+  authenticated :user do
+    root 'users#show', as: :authenticated_root
+  end
 
-  get 'welcome/index'
-
-  get 'welcome/about'
+  get 'about' => 'welcome#about'
 
   root 'welcome#index'
 
