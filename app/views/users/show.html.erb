@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="user-show">
+  <h4>Username: <%= @user.username %></h4>
+  <div class="row">
+    <div class="col-md-8">
+      <p><strong>Email: </strong><%= @user.email %></p>
+      <p><strong>member since: </strong><%= @user.created_at.to_date %></p>
+    </div>
+  </div>
+</div>
