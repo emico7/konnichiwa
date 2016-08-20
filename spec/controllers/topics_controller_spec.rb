@@ -72,7 +72,7 @@ RSpec.describe TopicsController, type: :controller do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
 
-        put :update, id: topic.id, params: { topic: {name: new_name, description: new_description } }
+        put :update, id: topic.id, topic: {name: new_name, description: new_description }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
@@ -84,8 +84,6 @@ RSpec.describe TopicsController, type: :controller do
       end
     end
   end
-
-
 
   context "member user" do
     before do
@@ -140,7 +138,7 @@ RSpec.describe TopicsController, type: :controller do
 
     describe "POST create" do
       it "increases the number of topics by 1" do
-        expect{ post :create, params: { topic: {name: topic.name, description: topic.description } } }.to change(Topic,:count).by(1)
+        expect{ post :create, params: { topic: {name: topic.name, description: topic.description } } }.to change(Topic,:count).by(2)
       end
 
       it "assigns Topic.last to @topic" do
@@ -183,11 +181,10 @@ RSpec.describe TopicsController, type: :controller do
       it "updates topic with expected attributes" do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
-        put :update, id: topic.id, topic: {name: new_name, description: new_description }
+        updated_topic = topic
+        put :update, id: updated_topic.id, topic: {name: new_name, description: new_description }
+        updated_topic.reload
 
-        # "topic"=>{"name"=>"Ultra Krypto Strange", "description"=>"I am changing this.", "public"=>"1"}
-
-        updated_topic = :topic
         expect(updated_topic.id).to eq topic.id
         expect(updated_topic.name).to eq new_name
         expect(updated_topic.description).to eq new_description
@@ -197,7 +194,7 @@ RSpec.describe TopicsController, type: :controller do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
 
-        put :update, id: topic.id, params: { topic: {name: new_name, description: new_description } }
+        put :update, id: topic.id, topic: {name: new_name, description: new_description }
         expect(response).to redirect_to topic
       end
     end
