@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  resources :topics
-  resources :questions
+  resources :topics do
+    resources :questions, except: [:index]
+  end
+
 
   get 'users/show'
 
   devise_for :users
 
   authenticated :user do
-    root 'users#show', as: :authenticated_root
+    root 'topics#show', as: :authenticated_root
   end
 
   get 'about' => 'welcome#about'

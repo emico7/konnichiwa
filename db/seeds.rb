@@ -18,11 +18,20 @@ topics = Topic.all
 50.times do
   Question.create!(
   topic: topics.sample,
-    title: Faker::Book.title,
-    body: Faker::Lorem.sentence(3)
+  title: Faker::Book.title,
+  body: Faker::Lorem.sentence(3)
+  )
+end
+questions = Question.all
+
+100.times do
+  Answer.create!(
+  question: questions.sample,
+  body: Faker::ChuckNorris.fact
   )
 end
 
 puts "Seed finished"
 puts "#{Topic.count} topics created"
 puts "#{Question.count} questions created"
+puts "#{Answer.count} answers created"
