@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticated :user do
-    root 'topics#show', as: :authenticated_root
+    root 'topics#index', as: :authenticated_root
   end
 
   get 'about' => 'welcome#about'
