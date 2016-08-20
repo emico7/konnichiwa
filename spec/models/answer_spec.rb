@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Answer, type: :model do
+  let(:topic) { create(:topic) }
   let(:question) { create(:question) }
   let(:answer) { create(:answer) }
 

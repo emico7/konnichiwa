@@ -8,11 +8,21 @@
 require 'faker'
 
 15.times do
+  Topic.create!(
+  name: Faker::Superhero.name,
+  description: Faker::Lorem.sentences(1)
+  )
+end
+topics = Topic.all
+
+50.times do
   Question.create!(
+  topic: topics.sample,
     title: Faker::Book.title,
     body: Faker::Lorem.sentence(3)
   )
 end
 
 puts "Seed finished"
+puts "#{Topic.count} topics created"
 puts "#{Question.count} questions created"

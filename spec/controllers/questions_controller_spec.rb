@@ -43,13 +43,13 @@ RSpec.describe QuestionsController, type: :controller do
       end
     end
 
-    # describe "GET show" do
-    #   it "returns http success" do
-    #     # sign_in user
-    #     get :show
-    #     expect(response).to have_http_status(:success)
-    #   end
-    # end
+    describe "GET show" do
+      it "returns http success" do
+        # sign_in user
+        get :show
+        expect(response).to have_http_status(:success)
+      end
+    end
 
 
     describe "GET new" do
@@ -123,31 +123,31 @@ RSpec.describe QuestionsController, type: :controller do
       end
     end
 
-    # describe "PUT update" do
-    #
-    #   it "updates question with expected attributes" do
-    #
-    #
-    #
-    #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
-    #
-    #     updated_question = assigns(:question)
-    #     expect(updated_question.id).to eq question.id
-    #     expect(updated_question.title).to eq new_title
-    #     expect(updated_question.body).to eq new_body
-    #   end
-    #
-    #   it "redirects to the updated question" do
-    #
-    #     sign_in user
-    #
-    #     new_title = "Updated title"
-    #     new_body = "This is an updated body."
-    #
-    #     put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
-    #     expect(response).to redirect_to question
-    #   end
-    # end
+    describe "PUT update" do
+
+      it "updates question with expected attributes" do
+
+
+
+        put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
+
+        updated_question = assigns(:question)
+        expect(updated_question.id).to eq question.id
+        expect(updated_question.title).to eq new_title
+        expect(updated_question.body).to eq new_body
+      end
+
+      it "redirects to the updated question" do
+
+        sign_in user
+
+        new_title = "Updated title"
+        new_body = "This is an updated body."
+
+        put :update, id: question.id, params: { question: {title: new_title, body: new_body} }
+        expect(response).to redirect_to question
+      end
+    end
 
     describe "DELETE destroy" do
       before do
