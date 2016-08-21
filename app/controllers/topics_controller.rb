@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :authorize_user, except: [:index, :show]
 
   def index
     @topics = Topic.all
@@ -59,4 +60,10 @@ class TopicsController < ApplicationController
     params.require(:topic).permit(:name, :description, :public)
   end
 
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to perform the action."
+      redirect_to topics_path
+    end
+  end
 end

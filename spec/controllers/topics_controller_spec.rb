@@ -86,9 +86,99 @@ RSpec.describe TopicsController, type: :controller do
     end
   end
 
-  context "signed-in user" do
+
+  context "member user" do
+
     before do
       sign_in user
+      # user.role = "#{member}"
+    end
+
+    describe "GET index" do
+      it "returns http success" do
+        get :index
+        expect(response).to have_http_status(:success)
+      end
+
+      # it "assigns Topic.all to @topic" do
+      #   get :index
+      #   expect(assigns(:topics)).to eq([topic])
+      # end
+
+      # it "does not include private topics in @topics" do
+      #   get :index
+      #   expect(assigns(:topics)).not_to include(my_private_topic)
+      # end
+    end
+
+
+    describe "GET show" do
+
+      # it "redirects from private topics" do
+      #   get :show, {id: my_private_topic.id}
+      #   expect(response).to redirect_to(new_session_path)
+      # end
+
+      it "returns http success" do
+        get :show, params: {id: topic.id}
+        expect(response).to have_http_status(:success)
+      end
+
+      it "renders the #show view" do
+        get :show, params: {id: topic.id}
+        expect(response).to render_template :show
+      end
+
+      it "assigns topic to @topic" do
+        get :show, params: {id: topic.id}
+        expect(assigns(:topic)).to eq(topic)
+      end
+    end
+
+    describe "GET new" do
+      it "returns http redirect" do
+        get :new
+        expect(response).to redirect_to(topics_path)
+      end
+    end
+
+    describe "POST create" do
+      it "returns http redirect" do
+        post :create, params: { topic: {name: topic.name, description: topic.description } }
+        expect(response).to redirect_to(topics_path)
+      end
+    end
+
+    describe "GET edit" do
+      it "returns http redirect" do
+        get :edit, params: {id: topic.id}
+        expect(response).to redirect_to(topics_path)
+      end
+    end
+
+    describe "PUT update" do
+      it "returns http redirect" do
+        new_name = "Edited name"
+        new_description = "This desctiption has been edited."
+
+        put :update, params: { id: topic.id, topic: {name: new_name, description: new_description } }
+        expect(response).to redirect_to(topics_path)
+      end
+    end
+
+    describe "DELETE destroy" do
+      it "returns http redirect" do
+        delete :destroy, params: {id: topic.id}
+        expect(response).to redirect_to(topics_path)
+      end
+    end
+  end
+
+
+  context "admin user" do
+    before do
+      sign_in user
+      user.role = "admin"
     end
 
     describe "GET index" do
