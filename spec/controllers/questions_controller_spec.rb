@@ -82,17 +82,17 @@ RSpec.describe QuestionsController, type: :controller do
       # end
 
 
-      it "assigns the new question to @question" do
-        topic.reload
-        post :create, params: { topic_id: topic.id, question: { title: question.title, body: question.body } }
-        expect(assigns(:question)).to eq Question.last
-      end
-
-
-      it "redirects to the question post" do
-        post :create, params: { topic_id: topic.id, question: { title: question.title, body: question.body } }
-        expect(response).to redirect_to [topic, Question.last]
-      end
+      # it "assigns the new question to @question" do
+      #   topic.reload
+      #   post :create, params: { topic_id: topic.id, question: { title: question.title, body: question.body } }
+      #   expect(assigns(:question)).to eq Question.last
+      # end
+      #
+      #
+      # it "redirects to the question post" do
+      #   post :create, params: { topic_id: topic.id, question: { title: question.title, body: question.body } }
+      #   expect(response).to redirect_to [topic, Question.last]
+      # end
     end
 
     describe "GET edit" do
