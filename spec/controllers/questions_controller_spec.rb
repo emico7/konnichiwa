@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe QuestionsController, type: :controller do
   let(:user) { create(:user) }
   let(:topic) { create(:topic)}
-  let(:question) { create(:question, topic: topic) }
+  let(:question) { create(:question, topic: topic, user: user) }
 
   context "guest user" do
 
