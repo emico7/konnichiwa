@@ -1,9 +1,9 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
-  # def index
-  #   @questions = Question.all
-  # end
+  def index
+    @questions = Question.all
+  end
 
   def show
     @question = Question.find(params[:id])
@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def create
     @topic = Topic.find(params[:topic_id])
     @question = @topic.questions.build(question_params)
-    # @post.user = current_user
+    @question.user = current_user
 
     if @question.save
       flash[:notice] = "Question was saved successfully."

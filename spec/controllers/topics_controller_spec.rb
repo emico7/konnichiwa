@@ -73,7 +73,7 @@ RSpec.describe TopicsController, type: :controller do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
 
-        put :update, id: topic.id, topic: {name: new_name, description: new_description }
+        put :update, params: { id: topic.id, topic: {name: new_name, description: new_description } }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
@@ -86,7 +86,7 @@ RSpec.describe TopicsController, type: :controller do
     end
   end
 
-  context "member user" do
+  context "signed-in user" do
     before do
       sign_in user
     end
@@ -183,7 +183,7 @@ RSpec.describe TopicsController, type: :controller do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
         updated_topic = topic
-        put :update, id: updated_topic.id, topic: {name: new_name, description: new_description }
+        put :update, params: { id: updated_topic.id, topic: {name: new_name, description: new_description } }
         updated_topic.reload
 
         expect(updated_topic.id).to eq topic.id
@@ -195,7 +195,7 @@ RSpec.describe TopicsController, type: :controller do
         new_name = "Edited name"
         new_description = "This desctiption has been edited."
 
-        put :update, id: topic.id, topic: {name: new_name, description: new_description }
+        put :update, params: { id: topic.id, topic: {name: new_name, description: new_description } }
         expect(response).to redirect_to topic
       end
     end

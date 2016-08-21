@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :questions, except: [:index]
   end
 
+  resources :questions, only: [:index]
+
 
   get 'users/show'
 

@@ -9,20 +9,20 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "GET show" do
       it "returns http success" do
-        get :show, { params: { topic_id: topic.id, id: question.id } }
+        get :show, params: { topic_id: topic.id, id: question.id }
         expect(response).to have_http_status(:success)
       end
     end
 
     describe "GET new" do
       it "returns http redirect" do
-        get :new, topic_id: topic.id
+        get :new, params: { topic_id: topic.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
   end
 
-  context "member user" do
+  context "signed-in user" do
     before do
       sign_in user
     end
@@ -46,7 +46,7 @@ RSpec.describe QuestionsController, type: :controller do
 
     describe "GET show" do
       it "returns http success" do
-        get :show, topic_id: topic.id, id: question.id
+        get :show, params: { topic_id: topic.id, id: question.id }
         expect(response).to have_http_status(:success)
       end
     end
@@ -56,20 +56,20 @@ RSpec.describe QuestionsController, type: :controller do
 
       it "returns http success" do
         topic.reload
-        get :new, topic_id: topic.id
+        get :new, params: { topic_id: topic.id }
         expect(response).to have_http_status(:success)
       end
 
       it "renders the new view" do
         topic.reload
-        get :new, topic_id: topic.id
+        get :new, params: { topic_id: topic.id }
         expect(response).to render_template :new
       end
 
 
       it "instantiates @question" do
         topic.reload
-        get :new, topic_id: topic.id
+        get :new, params: { topic_id: topic.id }
         expect(assigns(:question)).not_to be_nil
       end
     end
