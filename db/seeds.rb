@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+5.times do
+  User.create!(
+  username: Faker::Name.name,
+  email: Faker::Internet.email,
+  password: Faker::Internet.password
+  )
+end
+users = User.all
+
 15.times do
   Topic.create!(
   name: Faker::Superhero.name,
@@ -17,12 +26,29 @@ topics = Topic.all
 
 50.times do
   Question.create!(
+  user: users.sample,
   topic: topics.sample,
-    title: Faker::Book.title,
-    body: Faker::Lorem.sentence(3)
+  title: Faker::Book.title,
+  body: Faker::Lorem.sentence(3)
+  )
+end
+questions = Question.all
+
+100.times do
+  Answer.create!(
+  question: questions.sample,
+  body: Faker::ChuckNorris.fact
   )
 end
 
+user = User.first
+user.update_attributes!(
+  email: 'mrsjpiki@gmail.com',
+  password: 'helloworld'
+)
+
 puts "Seed finished"
+puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Question.count} questions created"
+puts "#{Answer.count} answers created"

@@ -10,13 +10,19 @@
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
-             <%= link_to question.title, question %>
+             <%= link_to question.title, topic_question_path(@topic, question) %>
            </h4>
+
+           <small>
+             submitted <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.username %><br>
+             <%= question.answers.count %> Answers
+           </small>
+
          </div>
        </div>
      <% end %>
    </div>
    <div class="col-md-8", id="new-question">
-     <%= link_to "New Question", new_question_path(@topic), class: 'btn btn-success' %>
+     <%= link_to "New Question", new_topic_question_path(@topic), class: 'btn btn-success' %>
    </div>
  </div>

@@ -4,7 +4,10 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
-            <p><%= link_to question.title, question %></p>
+            <p><%= link_to question.title, topic_question_path(question.topic, question) %></p>
+            <small>
+              submitted <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.username %>
+            </small>
           </h4>
         </div>
       </div>

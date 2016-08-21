@@ -10,15 +10,18 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    @topic = Topic.find(params[:topic_id])
     @question = Question.new
   end
 
   def create
-    @question = Question.new(question_params)
+    @topic = Topic.find(params[:topic_id])
+    @question = @topic.questions.build(question_params)
+    @question.user = current_user
 
     if @question.save
       flash[:notice] = "Question was saved successfully."
-      redirect_to @question
+      redirect_to [@topic, @question]
     else
       flash.now[:alert] = "There was an error saving the question. Please try again."
       redirect_to :new
@@ -35,7 +38,7 @@ class QuestionsController < ApplicationController
 
     if @question.save
       flash[:notice] = "Question was updated successfully."
-      redirect_to @question
+      redirect_to [@question.topic, @question]
     else
       flash.now[:alert] = "There was an error updating the question. Please try again."
       redirect_to :edit
@@ -47,7 +50,7 @@ class QuestionsController < ApplicationController
 
     if @question.destroy
       flash[:notice] = "\"#{@question.title}\" was deleted successfully."
-      redirect_to questions_path
+      redirect_to @question.topic
     else
       flash.now[:alert] = "There was an error deleting the question."
       render :show
