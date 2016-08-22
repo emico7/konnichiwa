@@ -10,9 +10,12 @@
       <p class="question-body"><%= @question.body %></p>
       <%= link_to "Go to the Topic", topic_path(@question.topic) %>
     </div>
-    <div class="col-md-4">
-      <%= link_to "Edit", edit_topic_question_path(@question.topic, @question), class: 'btn btn-success' %>
-      <%= link_to "Delete Question", [@question.topic, @question], method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this question?'} %>
-    </div>
+
+    <% if user_is_authorized_for_question?(@question) %>
+      <div class="col-md-4">
+        <%= link_to "Edit", edit_topic_question_path(@question.topic, @question), class: 'btn btn-success' %>
+        <%= link_to "Delete Question", [@question.topic, @question], method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this question?'} %>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :authorize_user, except: [:index, :show, :new, :create]
 
   def index
     @questions = Question.all
@@ -61,5 +62,14 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :body)
+  end
+
+  def authorize_user
+    question = Question.find(params[:id])
+
+    unless current_user == question.user || current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to [question.topic, question]
+    end
   end
 end

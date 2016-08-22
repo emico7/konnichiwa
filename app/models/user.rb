@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   has_many :questions
 
+  before_save { self.role ||= :member }
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
@@ -12,4 +14,6 @@ class User < ApplicationRecord
     :uniqueness => {
       :case_sensitive => false
     }
+
+  enum role: [:member, :admin]
 end
