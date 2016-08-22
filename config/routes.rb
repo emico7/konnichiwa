@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     resources :questions, except: [:index]
   end
 
-  resources :questions, only: [:index]
+  resources :questions, only: [:index] do
+    resources :answers, only: [:create, :destroy]
+  end
 
 
   get 'users/show'

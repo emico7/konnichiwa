@@ -1,0 +1,8 @@
+<div class="media">
+  <div class="media-body">
+    <small>
+      <%= answer.user.username %> posted <%= time_ago_in_words(answer.created_at) %> ago
+    </small>
+    <p><%= answer.body %></p>
+  </div>
+</div>
