@@ -41,12 +41,18 @@ questions = Question.all
   )
 end
 
-# user = User.first
-# user.update_attributes!(
-#   username: 'member',
-#   email: 'mrsjpiki@gmail.com',
-#   password: 'helloworld'
-# )
+admin = User.create!(
+  username: 'Admin User',
+  email: 'mrsjpiki@gmail.com',
+  password: 'helloworld',
+  role: 'admin'
+)
+
+member = User.create!(
+  username: 'Member User',
+  email: 'member@example.com',
+  password: 'helloworld'
+)
 
 puts "Seed finished"
 puts "#{User.count} users created"

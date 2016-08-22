@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe QuestionsController, type: :controller do
-  let(:user) { create(:user) }
+  let(:user) { create(:user, username: "randomuser", email: "random@email.com") }
   let(:other_user) { create(:user) }
   let(:topic) { create(:topic) }
   let(:question) { create(:question, topic: topic, user: user) }
