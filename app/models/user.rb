@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :questions
+  has_many :answers
 
   before_save { self.role ||= :member }
 
