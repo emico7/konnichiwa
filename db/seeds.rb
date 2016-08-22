@@ -36,6 +36,7 @@ questions = Question.all
 
 100.times do
   Answer.create!(
+  user: users.sample,
   question: questions.sample,
   body: Faker::ChuckNorris.fact
   )

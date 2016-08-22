@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:user) { create(:user) }
   it { is_expected.to have_many(:questions) }
+  it { is_expected.to have_many(:answers) }
 
   describe "attributes" do
     it "responds to role" do

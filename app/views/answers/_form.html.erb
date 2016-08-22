@@ -1,0 +1,10 @@
+<h5>- Add an answer -</h5>
+ <%= form_for [question, answer] do |f| %>
+   <div class="form-group">
+     <%= f.label :body, class: 'sr-only' %>
+
+     <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter an answer here" %>
+
+   </div>
+   <%= f.submit "Submit Comment", class: 'btn btn-default pull-right' %>
+ <% end %>
