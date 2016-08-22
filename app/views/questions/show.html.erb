@@ -10,10 +10,14 @@
       <p class="question-body"><%= @question.body %></p>
 
       <div>
-        <h3>Answers</h3>
+        <h4>- Answers- </h4>
         <%= render @question.answers  %>
       </div>
-      
+      <% if current_user %>
+        <%= render 'answers/form', answer: Answer.new, question: @question %>
+      <% end %>
+      </br>
+      </br>
       <%= link_to "Go to the Topic", topic_path(@question.topic) %>
     </div>
 
