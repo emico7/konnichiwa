@@ -48,12 +48,14 @@ admin = User.create!(
   password: 'helloworld',
   role: 'admin'
 )
+admin.confirm!
 
 member = User.create!(
   username: 'Member User',
   email: 'member@example.com',
   password: 'helloworld'
 )
+member.confirm!
 
 puts "Seed finished"
 puts "#{User.count} users created"
