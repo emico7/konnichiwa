@@ -23,6 +23,9 @@ Things you may want to cover:
 
 Konnichiwa is an educational social media application, which allows users who are studying Japanese to ask questions and receive help, communicate with Japanese users who are studying English to cultivate a fun and motivating atmosphere for learning a foreign language.
 
+https://aqueous-lowlands-34573.herokuapp.com/ 
+</br>(It's currently hosted at Heroku for free so it'll take a few minutes to load initally.)
+
 
 * Ruby version - 2.3.0
 * Rails version - 5.0.0
